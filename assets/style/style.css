@@ -6,7 +6,7 @@
   --highlight-secondary: #9d7beb;
   --radius: 0.5rem;
   --pill: 2rem;
-  --line: 0.1rem;
+  --line: 0.125rem;
 }
 * {
   box-sizing: border-box;
@@ -79,3 +79,20 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+
+/* Design 2nd button: color change*/
+a:nth-of-type(2) {
+  background-color: var(--highlight-secondary);
+  color: var(--secondary);
+}
+
+.show {
+  animation-name: show;
+  animation-duration: 2.5s;
+}
+
+@keyframes show{
+  0% {
+  background-color: var(--highlight-primary);
+ }
+}
