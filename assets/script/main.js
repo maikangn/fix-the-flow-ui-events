@@ -17,11 +17,21 @@ function larger() {
 bigger.classList.toggle('enlarge')
 }
 
-// 2.Color change Design button
+// 2. Color change Design button
 let changeColor = document.querySelector('a:nth-of-type(2)')
 
 changeColor.addEventListener('click', show)
 
 function show(){
   changeColor.classList.toggle('show')
+}
+
+// 3. Flash effect '&' button
+let flashing = document.querySelector('a:nth-of-type(3)')
+
+flashing.addEventListener('click', flash)
+flashing.addEventListener('animationed', flash)
+
+function flash() {
+  flashing.classList.toggle('flash')
 }

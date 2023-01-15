@@ -8,9 +8,11 @@
   --pill: 2rem;
   --line: 0.125rem;
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 2rem;
   padding: 0;
@@ -18,9 +20,11 @@ body {
   font-size: 2rem;
   background: var(--secondary);
 }
+
 section {
   max-width: 90vw;
 }
+
 a {
   display: inline-block;
   margin: 0.2em;
@@ -38,7 +42,6 @@ a:hover {
 }
 
 /* UI Event Classes */
-
 /* Jump animation on the interaction link */
 a:nth-of-type(12) {
   position: relative;
@@ -123,4 +126,30 @@ a:nth-of-type(2) {
   0% {
   background-color: var(--highlight-primary);
  }
+}
+
+/* '&' 3rd button: flashing effect*/
+a:nth-of-type(3) {
+  position: relative;
+  background: var(--primary);
+  color: var(--secondary);
+  border-color: var(--highlight-secondary);
+}
+
+.flash {
+  animation-name: flash;
+  animation-duration: 0.25s;
+  animation-iteration-count: 5;
+}
+
+@keyframes flash {
+  0% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
 }
