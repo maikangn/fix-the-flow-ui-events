@@ -8,30 +8,70 @@ function jumpHandler() {
 }
 
 // 1. Enlarging Frontend button
-let bigger = document.querySelector('a:nth-of-type(1)')
+let frontend = document.querySelector('a:nth-of-type(1)')
 
-bigger.addEventListener('click', larger)
-bigger.addEventListener('animationed', larger)
+frontend.addEventListener('click', largerHandler)
+frontend.addEventListener('animationed', largerHandler)
 
-function larger() {
-bigger.classList.toggle('enlarge')
+function largerHandler() {
+  frontend.classList.toggle('enlarge')
 }
 
 // 2. Color change Design button
 let changeColor = document.querySelector('a:nth-of-type(2)')
 
-changeColor.addEventListener('click', show)
+changeColor.addEventListener('click', showHandler)
 
-function show(){
+function showHandler(){
   changeColor.classList.toggle('show')
 }
 
 // 3. Flash effect '&' button
 let flashing = document.querySelector('a:nth-of-type(3)')
 
-flashing.addEventListener('click', flash)
-flashing.addEventListener('animationed', flash)
+flashing.addEventListener('click', flashHandler)
+flashing.addEventListener('animationed', flashHandler)
 
-function flash() {
+function flashHandler() {
   flashing.classList.toggle('flash')
+}
+
+// 4. Spinning animation on hover Development button
+let development = document.querySelector('a:nth-of-type(4)')
+
+development.addEventListener('mouseover', spinningHandler)
+development.addEventListener('animationend', spinningHandler)
+
+function spinningHandler() {
+  development.classList.toggle('spinning')
+}
+
+// 5. Expanding width size on click Sprint 5 button
+let sprint5 = document.querySelector('a:nth-of-type(5)')
+
+sprint5.addEventListener('click', expandHandler)
+sprint5.addEventListener('animationend', expandHandler)
+
+function expandHandler() {
+  sprint5.classList.toggle('expand')
+}
+
+// 6. Disco lights on hover Fix button
+let fix = document.querySelector('a:nth-of-type(6)')
+
+fix.addEventListener('mouseover', discoHandler)
+fix.addEventListener('animationend', discoHandler)
+
+function discoHandler() {
+  fix.classList.toggle('disco-lights')
+}
+
+// 7. Twist effect on doubleclick "The" button
+let the = document.querySelector('a:nth-of-type(7)')
+
+the.addEventListener('dblclick', animation8);
+the.addEventListener('animationend', animation8);
+
+function animation8(){
+  the.classList.toggle('twist')
 }

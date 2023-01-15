@@ -102,7 +102,7 @@ a:nth-of-type(1) {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.3);
+    transform: scale(1.4);
   }
   100% {
     transform: scale(1);
@@ -152,4 +152,153 @@ a:nth-of-type(3) {
   100% {
   opacity: 1;
   }
+}
+
+/* Development 4th button: spinning animation */
+a:nth-of-type(4) {
+  position: relative;
+  background: var(--highlight-primary);
+  color: var(--secondary);
+  border-color: var(--highlight-secondary);
+}
+
+.spinning {
+  animation-name: spinning;
+  animation-duration: 0.5s;
+  animation-iteration-count: 2;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Sprint 5 button: expanding width size on click*/
+a:nth-of-type(5) {
+  position: relative;
+  background: var(--secondary);
+  color: var(--primary);
+  border-color: var(--highlight-secondary);
+}
+
+.expand {
+  animation-name: expand;
+  animation-timing-function: cubic-bezier(0.22, 0.7, 0.42, 1);
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes expand {
+  0% {
+    text-align: center;
+    width: 15vh
+  }
+
+  50% {
+    text-align: center;
+    width: 60vh;
+  }
+
+  100% {
+    text-align: center;
+    width: 18vh;
+  }
+}
+
+/* Fix button: rainbow lights on hover */
+a:nth-of-type(6) {
+  position: relative;
+  background: var(--secondary);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.disco-lights {
+  animation-name: disco-lights;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1.1s;
+  animation-iteration-count: 1.5;
+}
+
+@keyframes disco-lights {
+  0% {
+  background: red;
+  }
+
+  10% {
+  background: orange;
+  }
+
+  20% {
+  background: yellow;
+  }
+
+  30% {
+  background: yellowgreen;
+  }
+
+  40% {
+  background: rgb(21, 163, 21);
+  }
+
+  50% {
+  background: blue;
+  }
+
+  60% {
+  background: magenta;
+  }
+
+  70% {
+  background: purple;
+  }
+
+  80% {
+  background: hotpink;
+  }
+
+  90% {
+  background: palevioletred;
+  }
+
+  100% {
+  background: turquoise;
+  }
+}
+
+/* "The" button: Twisting on doubleclick*/
+
+a:nth-of-type(7) {
+  position: relative;
+  background: var(--primary);
+  color: var(--secondary);
+  border-color: var(--highlight-primary);
+}
+
+.twist{
+  animation-name: twist;
+  animation-duration: 1.5s;
+}
+
+@keyframes twist{
+  0% {
+  transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+ }
+
+  50% {
+  transform: perspective(200px) rotateX(10deg) rotateY(10deg);
+ }
+
+  100% {
+  transform: perspective(200px) rotateX(20deg) rotateY(360deg);
+ }
 }
