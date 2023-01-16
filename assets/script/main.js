@@ -76,7 +76,7 @@ function twistHandler(){
   the.classList.toggle('twist')
 }
 
-//8. Shake animation mouseout Flow button
+// 8. Shake animation mouseout Flow button
 let flow = document.querySelector('a:nth-of-type(8)')
 
 flow.addEventListener('mouseout', shakeHandler);
@@ -85,3 +85,23 @@ flow.addEventListener('animationend', shakeHandler);
 function shakeHandler(){
   flow.classList.toggle('shaking')
 }
+
+// 9. Keyup animation User button
+let user = document.querySelector('a:nth-of-type(9)')
+user.addEventListener('keyup', keyupHandler)
+user.addEventListener('animationend', keyupHandler)
+
+function keyupHandler() {
+  user.classList.toggle('keyup')
+}
+
+// 10. Button moves to the right on click
+let interface = document.querySelector('a:nth-of-type(10)')
+
+interface.addEventListener('click', moveHandler)
+interface.addEventListener('animationend', moveHandler)
+
+function moveHandler() {
+  interface.classList.toggle('moving')
+}
+

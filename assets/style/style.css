@@ -307,7 +307,7 @@ a:nth-of-type(7) {
 a:nth-of-type(8) {
   position: relative;
   background: var(--secondary);
-  color: var(--highlight-secondary);
+  color: var(--highlight-primary);
   border-color: var(--highlight-secondary);
 }
 
@@ -349,5 +349,63 @@ a:nth-of-type(8) {
   }
   100% {
      transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* User button: keyup animation on release */
+a:nth-of-type(9) {
+  position: relative;
+  background: var(--secondary);
+  color: var(--highlight-secondary);
+  border-color: var(--highlight-primary);
+}
+
+.keyup {
+  animation-name: keyup;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes keyup {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-6.5vh);
+    box-shadow: 0 0 40px fuchsia;
+  }
+  100%{
+    transform: translateY(0);
+    border-color: fuchsia;
+  }
+}
+
+/* Interface button: move to right onclick */
+a:nth-of-type(10) {
+  position: relative;
+  background: var(--highlight-primary);
+  color: var(--highlight-secondary);
+  border-color: var(--secondary);
+}
+
+.moving {
+  animation-name: moving;
+  animation-duration: 1.1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes moving {
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(15vh);
+    box-shadow: 0 0 40px fuchsia;
+    background-color: var(--primary);
+    color: fuchsia;
+    border-color: fuchsia;
+  }
+  100%{
+    transform: translateX(0);
   }
 }
