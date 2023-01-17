@@ -69,8 +69,8 @@ function discoHandler() {
 // 7. Twist effect on doubleclick "The" button
 let the = document.querySelector('a:nth-of-type(7)')
 
-the.addEventListener('dblclick', twistHandler);
-the.addEventListener('animationend', twistHandler);
+the.addEventListener('dblclick', twistHandler)
+the.addEventListener('animationend', twistHandler)
 
 function twistHandler(){
   the.classList.toggle('twist')
@@ -79,8 +79,8 @@ function twistHandler(){
 // 8. Shake animation mouseout Flow button
 let flow = document.querySelector('a:nth-of-type(8)')
 
-flow.addEventListener('mouseout', shakeHandler);
-flow.addEventListener('animationend', shakeHandler);
+flow.addEventListener('mouseout', shakeHandler)
+flow.addEventListener('animationend', shakeHandler)
 
 function shakeHandler(){
   flow.classList.toggle('shaking')
