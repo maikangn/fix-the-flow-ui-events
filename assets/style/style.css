@@ -225,12 +225,12 @@ a:nth-of-type(6) {
 .disco-lights {
   animation-name: disco-lights;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  animation-duration: 1.1s;
+  animation-duration: 10s;
   animation-iteration-count: 1.5;
 }
 
 @keyframes disco-lights {
-  0% {
+  5% {
   background: red;
   }
 
